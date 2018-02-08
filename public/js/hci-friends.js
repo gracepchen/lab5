@@ -1,5 +1,23 @@
 'use strict';
 
+// step 22: listen to clicks on name
+
+$(document).ready(function() {
+  $( '.nameClicker').on("click", function(e){
+    e.preventDefault();
+    alert("asda");//do some stuff
+    var name = $(this).text();
+	$(this).html(anagrammedName(name));
+  });
+});
+
+$(document).ready(function() {
+  $( 'img').on("click", function(e){
+    e.preventDefault();
+    alert("asda");
+  });
+});
+
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
