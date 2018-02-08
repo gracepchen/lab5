@@ -1,36 +1,27 @@
 'use strict';
 
 // step 22: listen to clicks on name
-
 $(document).ready(function() {
-  $( '.nameClicker').on("click", function(e){
-    e.preventDefault();
-    alert("asda");//do some stuff
-    var name = $(this).text();
-	$(this).html(anagrammedName(name));
-  });
-});
-
-$(document).ready(function() {
-  $( 'img').on("click", function(e){
-    e.preventDefault();
-    alert("asda");
-  });
-});
+	$( ".friends" ).on( "click", ".nameClicker", function( event ) {
+		event.preventDefault();
+		var name = $(this).text();
+		$(this).text(anagrammedName(name));
+	});
+}
 
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
-})
+});
 
 /*
  * Function that is called when the document is ready.
  */
-function initializePage() {
-	console.log("Javascript connected!");
-}
+ function initializePage() {
+ 	console.log("Javascript connected!");
+ }
 
-function anagrammedName(name) {
+ function anagrammedName(name) {
 	// Thanks, Internet Anagram Server!
 	
 	if (name == "Doug Engelbart") {
